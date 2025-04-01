@@ -35,11 +35,13 @@ body {
     background: linear-gradient(to bottom, #615dad, #ffc8da);
     height: 100vh;
     margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -49,7 +51,6 @@ h1 {
     font-style: normal; 
     text-align: center;
     margin-bottom: 1.875rem;
-    padding-top: 1.875rem;
 }
 
 p {
@@ -104,4 +105,5 @@ p {
 .obsah {
     max-width: 600px;
     margin: 0 auto;
+    width: 90%;
 }
