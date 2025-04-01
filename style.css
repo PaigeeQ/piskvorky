@@ -40,6 +40,10 @@ h1 {
 
 p {
     color: white;
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-right: 1rem;
 }
 
 
@@ -61,7 +65,8 @@ p {
     justify-content: flex-end; 
     gap: 0.5rem;
     width: 100%; 
-    align-items: center;
+    align-items:center;
+
 }
 
 .ctverce {
