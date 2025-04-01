@@ -2,8 +2,8 @@
 :after,
 :before {
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 header {
@@ -41,7 +41,6 @@ body {
     align-items: center;
     flex-direction: column;
     background-repeat: no-repeat;
-    overflow-x: hidden;
 }
 
 h1 {
@@ -77,8 +76,6 @@ p {
     grid-template-columns: repeat(10, 1.725rem); 
     grid-template-rows: repeat(10, 1.725rem); 
     gap: 0;
-
-
 }
 
 .čtverec {
@@ -104,6 +101,5 @@ p {
 
 .obsah {
     max-width: 600px;
-    margin: 0 auto;
-    width: 90%;
+    margin: auto;
 }
