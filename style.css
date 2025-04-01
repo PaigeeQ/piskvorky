@@ -2,19 +2,31 @@
 :after,
 :before {
     box-sizing: border-box;
-   
 }
+
 header {
     display: flex;
-}
-
-.game-info, .icons {
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center; 
+    justify-content: space-between;  
+    align-items: center;  
     width: 100%;
     padding: 10px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    padding: 0.5rem;
+    
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end;  
+    gap: 0.5rem;
+    align-items: center;  
+    background-color: transparent; 
+    cursor: pointer;
 }
 
 body {
@@ -55,18 +67,6 @@ p {
 .icon2 {
     background-color: skyblue;
     padding: 0.675rem;
-   
-}
-
-.icons {
-    background-color: transparent; 
-    cursor: pointer;
-    display: flex;
-    justify-content: flex-end; 
-    gap: 0.5rem;
-    width: 100%; 
-    align-items:center;
-
 }
 
 .ctverce {
@@ -74,6 +74,8 @@ p {
     grid-template-columns: repeat(10, 1.725rem); 
     grid-template-rows: repeat(10, 1.725rem); 
     gap: 0;
+
+
 }
 
 .čtverec {
@@ -84,7 +86,7 @@ p {
     border: 0.075rem solid black;
     cursor: pointer;
     color: white;
-    background: #f4c2c2;
+    background: #ffc8da;
 }
 
 .čtverec:hover {
