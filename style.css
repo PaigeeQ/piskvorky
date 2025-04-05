@@ -1,45 +1,16 @@
+html {
+    box-sizing: border-box;
+}
 *,
 :after,
 :before {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;  
-    align-items: center;  
-    width: 100%;
-    padding: 10px;
-}
-
-.game-info {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; 
-    padding: 0.5rem;
-    
-}
-
-.icons { 
-    display: flex;  
-    flex-wrap: wrap; 
-    justify-content: center;  
-    gap: 0.5rem;
-    align-items: center;
-    width: 100%; 
-    max-width: 100%;
-    padding: 0.5rem;
-    background-color: transparent; 
-    cursor: pointer;
+    box-sizing: inherit;
 }
 
 body {
     background: linear-gradient(to bottom, #615dad, #ffc8da);
     height: 100vh;
     margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,36 +21,66 @@ body {
 h1 {
     font-family: "Lobster", sans-serif;
     color: white;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-style: normal; 
     text-align: center;
     margin-bottom: 1.875rem;
+    position: relative;   
+}
+
+.icons { 
+    display: flex;
+    cursor: pointer;
+    justify-content: flex-end;
+    border-radius: 2% 2% 0 0;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.game-info {
+    justify-content: flex-start;
+    display: flex;
+    align-items: center; 
+    width: 100%; 
+}
+
+header {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    width: 100%;
+    padding: 10px;
+    position: relative;
 }
 
 p {
     color: white;
     font-family: "poppins", sans-serif;
     font-weight: 400;
+    font-size: 1.5rem;
     font-style: normal;
     margin-right: 1rem;
+    font-weight: bold;
+    
 }
-
 
 .icon1 {
     background-color: turquoise;
     padding: 0.675rem;
+    border-radius: 10%;
 }
 
 .icon2 {
     background-color: skyblue;
     padding: 0.675rem;
+    border-radius: 10%;
 }
 
 .ctverce {
     display: grid;
     grid-template-columns: repeat(10, 1.725rem); 
     grid-template-rows: repeat(10, 1.725rem); 
-    gap: 0;
+    border: 1px solid black;
 }
 
 .čtverec {
@@ -90,21 +91,13 @@ p {
     border: 0.075rem solid black;
     cursor: pointer;
     color: white;
-    background: #ffc8da;
+    background-color: rgba(231, 204, 228, 0.4);
+    aspect-ratio: 1 / 1;
 }
 
-.čtverec:hover {
-    background-color: lightpink;
+.čtverec:hover,
+.čtverec:focus {
+    border: 1px solid violet;
+    background-color: rgba(217, 176, 228, 0.4);
 }
 
-.game-info {
-    display: flex;
-    align-items:center;
-    justify-content: start;
-}
-
-.obsah {
-    width: 800px;
-    margin: auto;
-}
- 
