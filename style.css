@@ -78,14 +78,14 @@ p {
 
 .ctverce {
     display: grid;
-    grid-template-columns: repeat(10, 1.725rem); 
-    grid-template-rows: repeat(10, 1.725rem); 
+    grid-template-columns: repeat(10, 3.25rem); 
+    grid-template-rows: repeat(10, 3.25rem); 
     border: 1px solid black;
 }
 
 .čtverec {
-    width: 1.725rem;
-    height: 1.725rem;
+    width: 3.25rem;
+    height: 3.25rem;
     margin: 0;
     background-repeat: no-repeat;
     border: 0.075rem solid black;
@@ -93,6 +93,7 @@ p {
     color: white;
     background-color: rgba(231, 204, 228, 0.4);
     aspect-ratio: 1 / 1;
+    max-width: 80vmin;
 }
 
 .čtverec:hover,
