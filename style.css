@@ -16,6 +16,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 h1 {
@@ -80,9 +81,11 @@ p {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     aspect-ratio: 1 / 1;
-    width: 80vmin;
+    width: 70vmin;
     max-width: 90vmin;
     background: rgba(255, 255, 255, 0.1);
+    height: 70vmin;
+    max-height: 80vmin;
 }
 
 .čtverec {
