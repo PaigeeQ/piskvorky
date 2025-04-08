@@ -105,3 +105,10 @@ p {
     background-color: rgba(217, 176, 228, 0.4);
 }
 
+.icon1:hover {
+    background-color: rgb(31, 148, 136);
+}
+
+.icon2:hover {
+    background-color: rgb(31, 129, 167);
+}
