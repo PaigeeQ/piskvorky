@@ -16,7 +16,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-repeat: no-repeat;
-    overflow: hidden;
+    overflow: auto;
 }
 
 h1 {
