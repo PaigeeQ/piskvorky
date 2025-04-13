@@ -19,9 +19,9 @@ const handleClick = (event) => {
 
 const ikona = document.querySelector(".icon4");
     if (currentPlayer === "circle") {
-        src = ikona.src = "obrazky/circle.svg";
+        ikona.src = "obrazky/circle.svg";
     } else {
-        src = ikona.src = "obrazky/cross.svg";
+        ikona.src = "obrazky/cross.svg";
 }
 };
 
