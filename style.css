@@ -85,7 +85,8 @@ p {
     max-width: 90vmin;
     background: rgba(255, 255, 255, 0.1);
     height: 70vmin;
-    max-height: 80vmin;
+    max-height: 90vmin;
+    gap: 0;
 }
 
 .čtverec {
@@ -99,7 +100,8 @@ p {
     color: white;
     background-color: rgba(231, 204, 228, 0.4);
     border: 1px solid black;
-    max-width: 80vmin;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .čtverec:hover,
@@ -114,4 +116,18 @@ p {
 
 .icon2:hover {
     background-color: rgb(31, 129, 167);
+}
+
+.čtverec--circle {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    background-image: url("obrazky/circle-black.svg");
+}
+
+.čtverec--cross {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    background-image: url("obrazky/cross-black.svg");
 }
