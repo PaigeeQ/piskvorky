@@ -15,7 +15,9 @@ const handleClick = (event) => {
     } else {
         clickCtverce.classList.add("čtverec--cross")
         currentPlayer = "circle"
-    };
+    }
+    clickCtverce.disabled = true;
+  
 
 const ikona = document.querySelector(".icon4");
     if (currentPlayer === "circle") {
@@ -30,3 +32,4 @@ const hraciPole = document.querySelectorAll(".čtverec");
 hraciPole.forEach((policko) => {
     policko.addEventListener("click", handleClick)
    });
+
