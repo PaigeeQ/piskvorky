@@ -35,7 +35,11 @@ hraciPole.forEach((policko) => {
 
 const opravduRestart = document.querySelector("#restart");
 
-opravduRestart.addEventListener("click", () => {
-    const anoChciRestart = confirm("Opravdu chceš hru restartovat?");
-
+opravduRestart.addEventListener("click", (event) => {
+    event.preventDefault(); //zabrání znova načtení stránky 
+    const anoChciRestart = confirm("Opravdu chceš hru restartovat?✔️"); //klik ok/zrušit
+    if (anoChciRestart) {
+        location.reload(); //funguje jako F5
+    } else {
+    }
 }); 
