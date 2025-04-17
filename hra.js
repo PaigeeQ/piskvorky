@@ -33,3 +33,9 @@ hraciPole.forEach((policko) => {
     policko.addEventListener("click", handleClick)
    });
 
+const opravduRestart = document.querySelector("#restart");
+
+opravduRestart.addEventListener("click", () => {
+    const anoChciRestart = confirm("Opravdu chceš hru restartovat?");
+
+}); 
