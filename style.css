@@ -66,13 +66,13 @@ p {
 }
 
 .icon1 {
-    background-color: turquoise;
+    background-color: #1fcca4;
     padding: 0.675rem;
     border-radius: 10%;
 }
 
 .icon2 {
-    background-color: skyblue;
+    background-color: #0197f6;
     padding: 0.675rem;
     border-radius: 10%;
 }
@@ -132,3 +132,17 @@ p {
     background-image: url("obrazky/cross-black.svg");
 }
 
+@keyframes zoom-in {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .animace {
+    animation: zoom-in 0.15s ease-out;
+  }

@@ -1,3 +1,5 @@
+import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4'
+
 let currentPlayer = "circle";
 
 const handleClick = (event) => {
@@ -9,11 +11,11 @@ const handleClick = (event) => {
     { return 
 
     } if (currentPlayer === "circle") {
-        clickCtverce.classList.add("čtverec--circle")
+        clickCtverce.classList.add("čtverec--circle", "animace")
         currentPlayer = "cross"
 
     } else {
-        clickCtverce.classList.add("čtverec--cross")
+        clickCtverce.classList.add("čtverec--cross", "animace")
         currentPlayer = "circle"
     }
     clickCtverce.disabled = true;
@@ -25,9 +27,39 @@ const ikona = document.querySelector(".icon4");
     } else {
         ikona.src = "obrazky/cross.svg";
 }
+checkWinner(); //vypiš
 };
 
+//výsledek
 const hraciPole = document.querySelectorAll(".čtverec");
+
+const checkWinner = () => {
+  const herniPole = Array.from(hraciPole).map((ctverec) => {
+    if (ctverec.classList.contains("čtverec--cross")) {
+      return "x";
+    } else if (ctverec.classList.contains("čtverec--circle")) {
+      return "o";
+    } else {
+      return "_";
+    }
+  });
+
+  const vitez = findWinner(herniPole);
+
+  if (vitez === "x" || vitez === "o") { // || nebo
+    setTimeout(() => {                  // Spusť nějaký kód po určitém čase
+      alert(`Vyhrál hráč se symbolem ${vitez === "x" ? "křížek" : "kolečko"}!`);
+      location.reload();
+    }, 100);
+  } else if (vitez === "tie") {
+    setTimeout(() => {
+      alert("Hra skončila remízou!");
+      location.reload();
+    }, 100);
+  }
+};
+
+
 
 hraciPole.forEach((policko) => {
     policko.addEventListener("click", handleClick)
