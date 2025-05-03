@@ -19,6 +19,17 @@ body {
     overflow: auto;
 }
 
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100%;
+  background: linear-gradient(to bottom, #615dad, #ffc8da);
+  z-index: -10;
+  pointer-events: none;
+  }
+
 h1 {
     font-family: "Lobster", sans-serif;
     color: white;
