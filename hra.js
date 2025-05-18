@@ -30,6 +30,7 @@ const updateIkona = () => {
 
 //AI odehraje tah 
 const playAIMove = async () => {
+  console.log("🧠 AI tah byl spuštěn!"); 
   document.querySelectorAll(".čtverec").forEach((policko) => policko.disabled = true)
 // BONUS: Zablokuj rháče během čekání na AI 
 
@@ -60,36 +61,25 @@ const handleClick = async (event) => {
     if (clickCtverce.classList.contains("čtverec--circle") ||
        clickCtverce.classList.contains("čtverec--cross"))
 
-    { return 
-
-    } if (currentPlayer === "circle") {
+    return
+    
+    if (currentPlayer === "circle") {
         clickCtverce.classList.add("čtverec--circle", "animace")
+        clickCtverce.disabled = true;
         currentPlayer = "cross"
-
-    } else {
-        clickCtverce.classList.add("čtverec--cross", "animace")
-        currentPlayer = "circle"
-    }
-    clickCtverce.disabled = true;
+    
     updateIkona();
     checkWinner(); //vypiš
 
-// const ikona = document.querySelector(".icon4");
-//     if (currentPlayer === "circle") {
-//         ikona.src = "obrazky/circle.svg";
-//     } else {
-//         ikona.src = "obrazky/cross.svg";
-// }
-// checkWinner(); 
-
-
 // jestli je na tahu křížek a neni konec
-if (!findWinner(getBoardState())) {
+const winner = findWinner(getBoardState());
+if (!winner && currentPlayer === "cross") {
   setTimeout(() => {
     if (currentPlayer === "cross") {
       playAIMove();
     }
   }, 500);
+}
 };
 };
 
