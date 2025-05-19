@@ -13,7 +13,7 @@ const getBoardState = () => {
 
 // AI API - návrh tahu pro hráče "x"
 const getAIMove = async (board) => {
-  const response = await fetch('https://piskvorky.czechitas-podklady.cz/api/suggest-move', {
+  const response = await fetch('https://piskvorky.czechitas-podklady.cz/api/suggest-next-move', {
     method: 'POST', 
     headers: { 'Content-Type': 'application/json' }, 
     body: JSON.stringify({ board: board, player: 'x' }), 
